@@ -28,8 +28,6 @@ module FastCry
   end
 
   def receive_after(request)
-    message = "After From '#{request.socket_address}', Message: '#{request.message}'"
-    request.send(message)
   end
 
   private def initialize_listen(object, server)
