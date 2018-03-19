@@ -1,0 +1,9 @@
+name: fast_cry
+version: 0.1.0
+
+authors:
+  - Jeffrey Davenport <jeffrey.davenport@chargeback.com>
+
+crystal: 0.24.1
+
+license: MIT
