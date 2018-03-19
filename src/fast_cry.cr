@@ -7,19 +7,14 @@ module FastCry
   private class_getter tcp_server = TCPServer.new
   property
 
-  # TODO: Put your code here
-
-  def initialize!(object = self)
-    initialize_udp(object)
-    # initialize_tcp(object)
-  end
-
-  def initialize_tcp(object = self)
+  def initialize_tcp_server(object = self)
     initialize_listen(object, tcp_server)
+    sleep
   end
 
-  def initialize_udp(object = self)
+  def initialize_udp_server(object = self)
     initialize_listen(object, udp_server)
+    sleep
   end
 
   def receive_udp(request)
@@ -50,6 +45,3 @@ module FastCry
     end
   end
 end
-
-FastCry.initialize!
-sleep
