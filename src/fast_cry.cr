@@ -3,16 +3,17 @@ require "./fast_cry/*"
 module FastCry
   extend self
 
-  private class_getter udp_server = UDPServer.new
-  private class_getter tcp_server = TCPServer.new
-  property
+  # private class_getter udp_server : UDPServer?
+  # private class_getter tcp_server : TCPServer?
 
   def initialize_tcp_server(object = self)
+    tcp_server = TCPServer.new
     initialize_listen(object, tcp_server)
     sleep
   end
 
   def initialize_udp_server(object = self)
+    udp_server = UDPServer.new
     initialize_listen(object, udp_server)
     sleep
   end
